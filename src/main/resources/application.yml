@@ -1,0 +1,27 @@
+spring:
+  datasource:  # 配hi数据库信息
+    url: jdbc:mysql://10.10.10.181:3306/test?characterEncoding=utf-8
+    username: test
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+  thymeleaf:
+    mode: HTML # Template mode to be applied to templates. See also Thymeleaf's TemplateMode enum.
+    prefix: classpath:/templates/ # Prefix that gets prepended to view names when building a URL.
+    suffix: .html # Suffix that gets appended to view names when building a URL.
+#  security:
+#    user:
+#      name: "admin"
+#      password: "admin"
+
+server:  #配置服务器访问的地址和端口号
+  address: 127.0.0.1
+  port: 8081
+
+logging:
+  level:
+    org.woodwhale.king: DEBUG
